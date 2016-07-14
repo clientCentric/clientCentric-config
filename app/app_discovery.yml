@@ -1,0 +1,10 @@
+server:
+  port: ${PORT:${discovery.port}}
+
+---
+spring:
+  profiles: local, test, dev
+eureka:
+  client:
+    register-with-eureka: false # WORKAROUND: for one instance deployment
+    fetchRegistry: false        # WORKAROUND: for one instance deployment
